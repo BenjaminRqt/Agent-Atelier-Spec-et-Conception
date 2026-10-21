@@ -1,0 +1,20 @@
+{
+  "permissions": {
+    "additionalDirectories": [
+      "~/chemin/vers/mon-projet"
+    ],
+    "allow": [
+      "Edit(~/chemin/vers/mon-projet/.atelier/**)",
+      "Write(~/chemin/vers/mon-projet/.atelier/**)"
+    ],
+    "deny": [
+      "Edit(~/chemin/vers/mon-projet/*)",
+      "Write(~/chemin/vers/mon-projet/*)",
+      "Edit(~/chemin/vers/mon-projet/<dossier-de-code>/**)",
+      "Write(~/chemin/vers/mon-projet/<dossier-de-code>/**)",
+      "Edit(~/chemin/vers/mon-projet/.git/**)",
+      "Write(~/chemin/vers/mon-projet/.git/**)",
+      "Read(~/chemin/vers/mon-projet/<chemin-des-secrets>/**)"
+    ]
+  }
+}

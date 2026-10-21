@@ -1,0 +1,254 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="980" viewBox="0 0 1600 980" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif">
+  <title>Atelier specs — fonctionnement de l'agent</title>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#121a36"/>
+      <stop offset="1" stop-color="#1d2a52"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#7c6cf2" stop-opacity="0.35"/>
+      <stop offset="1" stop-color="#7c6cf2" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="panel" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="0.07"/>
+      <stop offset="1" stop-color="#ffffff" stop-opacity="0.025"/>
+    </linearGradient>
+    <linearGradient id="brand" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#8b7cf6"/>
+      <stop offset="1" stop-color="#4fc3e8"/>
+    </linearGradient>
+    <linearGradient id="pipe" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#8b7cf6"/>
+      <stop offset="0.5" stop-color="#4fc3e8"/>
+      <stop offset="1" stop-color="#3fd0a6"/>
+    </linearGradient>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="#8fa0c8"/>
+    </marker>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="130%">
+      <feDropShadow dx="0" dy="6" stdDeviation="10" flood-color="#000" flood-opacity="0.35"/>
+    </filter>
+    <pattern id="dots" width="26" height="26" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1.2" fill="#ffffff" opacity="0.06"/>
+    </pattern>
+  </defs>
+
+  <!-- Fond -->
+  <rect width="1600" height="980" rx="28" fill="url(#bg)"/>
+  <rect width="1600" height="980" rx="28" fill="url(#dots)"/>
+  <circle cx="725" cy="420" r="430" fill="url(#glow)"/>
+
+  <!-- En-tête -->
+  <text x="70" y="88" font-size="40" font-weight="700" fill="#ffffff" letter-spacing="-0.5">Atelier specs</text>
+  <rect x="70" y="104" width="120" height="5" rx="2.5" fill="url(#brand)"/>
+  <text x="70" y="146" font-size="19" fill="#b9c2dc">Un binôme IA pour cadrer, spécifier, concevoir, découper et présenter. Il propose, tu tranches.</text>
+  <g transform="translate(1290,62)">
+    <rect width="240" height="44" rx="22" fill="#ffffff" fill-opacity="0.08" stroke="#ffffff" stroke-opacity="0.18"/>
+    <circle cx="26" cy="22" r="7" fill="#3fd0a6"/>
+    <text x="44" y="28" font-size="16" fill="#e7ebf7" font-weight="600">Claude Code + ce dépôt</text>
+  </g>
+
+  <!-- Toi -->
+  <g transform="translate(70,220)">
+    <circle cx="80" cy="70" r="58" fill="url(#brand)" filter="url(#shadow)"/>
+    <circle cx="80" cy="56" r="17" fill="#ffffff" fill-opacity="0.95"/>
+    <path d="M50 104 C54 82 106 82 110 104 Z" fill="#ffffff" fill-opacity="0.95"/>
+    <text x="80" y="160" text-anchor="middle" font-size="20" font-weight="700" fill="#ffffff">Toi</text>
+    <text x="80" y="184" text-anchor="middle" font-size="14" fill="#b9c2dc">tu lances, tu valides</text>
+    <g font-family="'SFMono-Regular', Menlo, Consolas, monospace" font-size="15" fill="#e7ebf7">
+      <rect x="10" y="212" width="140" height="30" rx="15" fill="#ffffff" fill-opacity="0.07"/><text x="80" y="232" text-anchor="middle">/sujet</text>
+      <rect x="10" y="250" width="140" height="30" rx="15" fill="#ffffff" fill-opacity="0.07"/><text x="80" y="270" text-anchor="middle">/cadrage</text>
+      <rect x="10" y="288" width="140" height="30" rx="15" fill="#ffffff" fill-opacity="0.07"/><text x="80" y="308" text-anchor="middle">/spec</text>
+      <rect x="10" y="326" width="140" height="30" rx="15" fill="#ffffff" fill-opacity="0.07"/><text x="80" y="346" text-anchor="middle">/conception</text>
+      <rect x="10" y="364" width="140" height="30" rx="15" fill="#ffffff" fill-opacity="0.07"/><text x="80" y="384" text-anchor="middle">/decoupage</text>
+      <rect x="10" y="402" width="140" height="30" rx="15" fill="#ffffff" fill-opacity="0.07"/><text x="80" y="422" text-anchor="middle">/publier</text>
+    </g>
+  </g>
+  <path d="M236 380 L318 380" stroke="#8fa0c8" stroke-width="2.5" fill="none" marker-end="url(#arr)"/>
+
+  <!-- L'agent -->
+  <g transform="translate(330,200)">
+    <rect width="800" height="470" rx="24" fill="url(#panel)" stroke="#ffffff" stroke-opacity="0.16" filter="url(#shadow)"/>
+    <text x="32" y="48" font-size="13" font-weight="700" fill="#8fa0c8" letter-spacing="2.5">L'AGENT · CE DÉPÔT</text>
+
+    <!-- Tuiles : 3 x 2 -->
+    <g font-size="14">
+      <!-- 1 Règles -->
+      <g transform="translate(32,72)">
+        <rect width="236" height="180" rx="16" fill="#ffffff" fill-opacity="0.06" stroke="#8b7cf6" stroke-opacity="0.55"/>
+        <rect x="18" y="18" width="38" height="38" rx="10" fill="#8b7cf6"/>
+        <path d="M28 28 h18 M28 37 h18 M28 46 h11" stroke="#fff" stroke-width="3" stroke-linecap="round"/>
+        <text x="70" y="36" font-size="18" font-weight="700" fill="#fff">Règles</text>
+        <text x="70" y="56" font-size="13" fill="#b9a9ff" font-family="Menlo, Consolas, monospace">CLAUDE.md</text>
+        <text x="18" y="90" fill="#cdd4ea">Markdown d'abord</text>
+        <text x="18" y="112" fill="#cdd4ea">Ne rien inventer</text>
+        <text x="18" y="134" fill="#cdd4ea">Code en lecture seule</text>
+        <text x="18" y="156" fill="#cdd4ea">Jira seulement sur accord</text>
+      </g>
+      <!-- 2 Skills -->
+      <g transform="translate(282,72)">
+        <rect width="236" height="180" rx="16" fill="#ffffff" fill-opacity="0.06" stroke="#4fc3e8" stroke-opacity="0.55"/>
+        <rect x="18" y="18" width="38" height="38" rx="10" fill="#4fc3e8"/>
+        <path d="M33 26 L28 38 h9 l-4 12 L45 34 h-9 l4 -8 z" fill="#fff"/>
+        <text x="70" y="36" font-size="18" font-weight="700" fill="#fff">Skills</text>
+        <text x="70" y="56" font-size="13" fill="#9fe2f6" font-family="Menlo, Consolas, monospace">.claude/skills/</text>
+        <text x="18" y="90" fill="#cdd4ea">Une par étape du workflow</text>
+        <text x="18" y="112" fill="#cdd4ea">+ sujet et publier</text>
+        <text x="18" y="134" fill="#cdd4ea">Lisent le code avant d'écrire</text>
+        <text x="18" y="156" fill="#cdd4ea">Mettent à jour la fiche</text>
+      </g>
+      <!-- 3 Relecteur -->
+      <g transform="translate(532,72)">
+        <rect width="236" height="180" rx="16" fill="#ffffff" fill-opacity="0.06" stroke="#ef7b6c" stroke-opacity="0.6"/>
+        <rect x="18" y="18" width="38" height="38" rx="10" fill="#ef7b6c"/>
+        <circle cx="35" cy="35" r="8" stroke="#fff" stroke-width="3" fill="none"/>
+        <path d="M41 41 L48 48" stroke="#fff" stroke-width="3.5" stroke-linecap="round"/>
+        <text x="70" y="36" font-size="18" font-weight="700" fill="#fff">Relecteur</text>
+        <text x="70" y="56" font-size="13" fill="#ffb3a8" font-family="Menlo, Consolas, monospace">avocat-du-diable</text>
+        <text x="18" y="90" fill="#cdd4ea">Après chaque étape</text>
+        <text x="18" y="112" fill="#cdd4ea">Trous, contradictions,</text>
+        <text x="18" y="134" fill="#cdd4ea">cas limites, écarts au code</text>
+        <text x="18" y="156" fill="#cdd4ea">Verdict : prêt ou pas</text>
+      </g>
+      <!-- 4 Hooks -->
+      <g transform="translate(32,268)">
+        <rect width="236" height="170" rx="16" fill="#ffffff" fill-opacity="0.06" stroke="#f5b54a" stroke-opacity="0.6"/>
+        <rect x="18" y="18" width="38" height="38" rx="10" fill="#f5b54a"/>
+        <path d="M37 25 v14 M30 33 a10 10 0 1 0 14 0" stroke="#fff" stroke-width="3" fill="none" stroke-linecap="round"/>
+        <text x="70" y="36" font-size="18" font-weight="700" fill="#fff">Hooks</text>
+        <text x="70" y="56" font-size="13" fill="#ffd68a" font-family="Menlo, Consolas, monospace">au démarrage</text>
+        <text x="18" y="90" fill="#cdd4ea">Synchro git avec main</text>
+        <text x="18" y="112" fill="#cdd4ea">Fiche du sujet courant</text>
+        <text x="18" y="134" fill="#cdd4ea">injectée dans la session</text>
+      </g>
+      <!-- 5 Scripts -->
+      <g transform="translate(282,268)">
+        <rect width="236" height="170" rx="16" fill="#ffffff" fill-opacity="0.06" stroke="#3fd0a6" stroke-opacity="0.55"/>
+        <rect x="18" y="18" width="38" height="38" rx="10" fill="#3fd0a6"/>
+        <path d="M27 30 l7 6 -7 6 M37 44 h11" stroke="#fff" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+        <text x="70" y="36" font-size="18" font-weight="700" fill="#fff">Scripts</text>
+        <text x="70" y="56" font-size="13" fill="#9ff0d6" font-family="Menlo, Consolas, monospace">scripts/</text>
+        <g font-family="Menlo, Consolas, monospace" font-size="13" fill="#cdd4ea">
+          <text x="18" y="90">sujets.sh · git-sync.sh</text>
+          <text x="18" y="110">git-publier.sh</text>
+          <text x="18" y="130">notion-etat.sh</text>
+        </g>
+        <text x="18" y="154" font-size="13" fill="#8fa0c8">bascule, branches, retouches Notion</text>
+      </g>
+      <!-- 6 Contextes -->
+      <g transform="translate(532,268)">
+        <rect width="236" height="170" rx="16" fill="#ffffff" fill-opacity="0.06" stroke="#c486e8" stroke-opacity="0.6"/>
+        <rect x="18" y="18" width="38" height="38" rx="10" fill="#c486e8"/>
+        <path d="M27 30 h20 v17 h-20 z M27 30 l5 -5 h10 l5 5" stroke="#fff" stroke-width="2.6" fill="none" stroke-linejoin="round"/>
+        <text x="70" y="36" font-size="18" font-weight="700" fill="#fff">Contextes</text>
+        <text x="70" y="56" font-size="13" fill="#e4b9f8" font-family="Menlo, Consolas, monospace">.atelier/contexte.md</text>
+        <text x="18" y="90" fill="#cdd4ea">Dans le projet cible :</text>
+        <text x="18" y="112" fill="#cdd4ea">dépôts, glossaire, pièges,</text>
+        <text x="18" y="134" fill="#cdd4ea">conventions</text>
+      </g>
+    </g>
+  </g>
+
+  <!-- Sorties -->
+  <g transform="translate(1190,200)">
+    <text x="0" y="-14" font-size="13" font-weight="700" fill="#8fa0c8" letter-spacing="2.5">CONNECTEURS</text>
+    <g font-size="14">
+      <g transform="translate(0,0)">
+        <rect width="340" height="62" rx="14" fill="#ffffff" fill-opacity="0.07" stroke="#ffffff" stroke-opacity="0.14"/>
+        <rect x="14" y="13" width="36" height="36" rx="9" fill="#ffffff"/><text x="32" y="38" text-anchor="middle" font-size="22" font-weight="800" fill="#111">N</text>
+        <text x="64" y="28" font-size="17" font-weight="700" fill="#fff">Notion</text>
+        <text x="64" y="48" fill="#b9c2dc">Pages lisibles, retouches préservées</text>
+      </g>
+      <g transform="translate(0,74)">
+        <rect width="340" height="62" rx="14" fill="#ffffff" fill-opacity="0.07" stroke="#ffffff" stroke-opacity="0.14"/>
+        <rect x="14" y="13" width="36" height="36" rx="9" fill="#ffd02f"/><text x="32" y="38" text-anchor="middle" font-size="20" font-weight="800" fill="#050038">M</text>
+        <text x="64" y="28" font-size="17" font-weight="700" fill="#fff">Miro</text>
+        <text x="64" y="48" fill="#b9c2dc">Schémas : modèles, séquences, flux</text>
+      </g>
+      <g transform="translate(0,148)">
+        <rect width="340" height="62" rx="14" fill="#ffffff" fill-opacity="0.07" stroke="#ffffff" stroke-opacity="0.14"/>
+        <rect x="14" y="13" width="36" height="36" rx="9" fill="#2684ff"/><text x="32" y="38" text-anchor="middle" font-size="20" font-weight="800" fill="#fff">J</text>
+        <text x="64" y="28" font-size="17" font-weight="700" fill="#fff">Jira</text>
+        <text x="64" y="48" fill="#b9c2dc">Epics et tickets, sur accord explicite</text>
+      </g>
+      <g transform="translate(0,222)">
+        <rect width="340" height="62" rx="14" fill="#ffffff" fill-opacity="0.07" stroke="#ffffff" stroke-opacity="0.14"/>
+        <rect x="14" y="13" width="36" height="36" rx="9" fill="#fc6d26"/><text x="32" y="38" text-anchor="middle" font-size="20" font-weight="800" fill="#fff">G</text>
+        <text x="64" y="28" font-size="17" font-weight="700" fill="#fff">GitLab</text>
+        <text x="64" y="48" fill="#b9c2dc">Une branche et une MR par type</text>
+      </g>
+      <g transform="translate(0,296)">
+        <rect width="340" height="62" rx="14" fill="#ffffff" fill-opacity="0.07" stroke="#ffffff" stroke-opacity="0.14" stroke-dasharray="5 4"/>
+        <rect x="14" y="13" width="36" height="36" rx="9" fill="#3fd0a6"/><text x="32" y="38" text-anchor="middle" font-size="16" font-weight="800" fill="#0d2a22">&lt;/&gt;</text>
+        <text x="64" y="28" font-size="17" font-weight="700" fill="#fff">Dépôts de code</text>
+        <text x="64" y="48" fill="#b9c2dc">Lus pour ancrer, jamais modifiés</text>
+      </g>
+      <g transform="translate(0,370)">
+        <rect width="340" height="62" rx="14" fill="#ffffff" fill-opacity="0.07" stroke="#ffffff" stroke-opacity="0.14" stroke-dasharray="5 4"/>
+        <rect x="14" y="13" width="36" height="36" rx="9" fill="#a259ff"/><text x="32" y="38" text-anchor="middle" font-size="20" font-weight="800" fill="#fff">F</text>
+        <text x="64" y="28" font-size="17" font-weight="700" fill="#fff">Figma</text>
+        <text x="64" y="48" fill="#b9c2dc">Composants, en lecture seule</text>
+      </g>
+    </g>
+  </g>
+  <g stroke="#8fa0c8" stroke-width="2.5" fill="none" marker-end="url(#arr)">
+    <path d="M1130 300 C1160 300 1160 231 1186 231"/>
+    <path d="M1130 330 C1165 330 1160 305 1186 305"/>
+    <path d="M1130 380 C1165 380 1160 379 1186 379"/>
+    <path d="M1130 430 C1165 430 1160 453 1186 453"/>
+  </g>
+  <g stroke="#8fa0c8" stroke-width="2.5" fill="none" stroke-dasharray="6 6" marker-start="url(#arr)">
+    <path d="M1136 520 C1165 520 1160 527 1186 527"/>
+    <path d="M1136 560 C1165 560 1160 601 1186 601"/>
+  </g>
+  <text x="1148" y="676" font-size="13" fill="#8fa0c8">— écrit    - - lit</text>
+
+  <!-- Workflow -->
+  <g transform="translate(70,730)">
+    <text x="0" y="0" font-size="13" font-weight="700" fill="#8fa0c8" letter-spacing="2.5">LE WORKFLOW D'UN SUJET</text>
+    <rect x="0" y="66" width="1460" height="6" rx="3" fill="url(#pipe)" opacity="0.85"/>
+    <g font-size="15">
+      <!-- étapes -->
+      <g transform="translate(0,30)">
+        <rect width="200" height="78" rx="39" fill="#1b2650" stroke="#8b7cf6" stroke-width="2"/>
+        <text x="100" y="35" text-anchor="middle" font-size="18" font-weight="700" fill="#fff">Brief</text>
+        <text x="100" y="57" text-anchor="middle" fill="#b9c2dc" font-family="Menlo, Consolas, monospace" font-size="13">00-brief.md</text>
+      </g>
+      <g transform="translate(252,30)">
+        <rect width="200" height="78" rx="39" fill="#1b2650" stroke="#8b7cf6" stroke-width="2"/>
+        <text x="100" y="35" text-anchor="middle" font-size="18" font-weight="700" fill="#fff">Cadrage</text>
+        <text x="100" y="57" text-anchor="middle" fill="#b9c2dc" font-family="Menlo, Consolas, monospace" font-size="13">01-cadrage.md</text>
+      </g>
+      <g transform="translate(504,30)">
+        <rect width="200" height="78" rx="39" fill="#1b2650" stroke="#6aa6f0" stroke-width="2"/>
+        <text x="100" y="35" text-anchor="middle" font-size="18" font-weight="700" fill="#fff">Spec</text>
+        <text x="100" y="57" text-anchor="middle" fill="#b9c2dc" font-family="Menlo, Consolas, monospace" font-size="13">02-spec.md</text>
+      </g>
+      <g transform="translate(756,30)">
+        <rect width="200" height="78" rx="39" fill="#1b2650" stroke="#4fc3e8" stroke-width="2"/>
+        <text x="100" y="35" text-anchor="middle" font-size="18" font-weight="700" fill="#fff">Conception</text>
+        <text x="100" y="57" text-anchor="middle" fill="#b9c2dc" font-family="Menlo, Consolas, monospace" font-size="13">03-conception.md</text>
+      </g>
+      <g transform="translate(1008,30)">
+        <rect width="200" height="78" rx="39" fill="#1b2650" stroke="#3fd0a6" stroke-width="2"/>
+        <text x="100" y="35" text-anchor="middle" font-size="18" font-weight="700" fill="#fff">Découpage</text>
+        <text x="100" y="57" text-anchor="middle" fill="#b9c2dc" font-family="Menlo, Consolas, monospace" font-size="13">04-decoupage.md</text>
+      </g>
+      <g transform="translate(1260,30)">
+        <rect width="200" height="78" rx="39" fill="#1b2650" stroke="#3fd0a6" stroke-width="2" stroke-dasharray="6 5"/>
+        <text x="100" y="35" text-anchor="middle" font-size="18" font-weight="700" fill="#fff">Présentation</text>
+        <text x="100" y="57" text-anchor="middle" fill="#b9c2dc" font-size="13">sur demande</text>
+      </g>
+    </g>
+    <!-- badges sous les étapes -->
+    <g font-size="13" font-weight="600">
+      <rect x="532" y="124" width="144" height="26" rx="13" fill="#ffffff" fill-opacity="0.08"/><text x="604" y="142" text-anchor="middle" fill="#e7ebf7">→ Notion + Miro</text>
+      <rect x="784" y="124" width="144" height="26" rx="13" fill="#ffffff" fill-opacity="0.08"/><text x="856" y="142" text-anchor="middle" fill="#e7ebf7">→ Notion + Miro</text>
+      <rect x="1036" y="124" width="144" height="26" rx="13" fill="#ffffff" fill-opacity="0.08"/><text x="1108" y="142" text-anchor="middle" fill="#e7ebf7">→ Jira sur accord</text>
+      <rect x="1288" y="124" width="144" height="26" rx="13" fill="#ffffff" fill-opacity="0.08"/><text x="1360" y="142" text-anchor="middle" fill="#e7ebf7">→ artefact HTML</text>
+    </g>
+    <text x="0" y="200" font-size="15" fill="#b9c2dc">
+      <tspan fill="#ffffff" font-weight="700">À chaque étape</tspan>  relue par l'avocat-du-diable  ·  fiche <tspan font-family="Menlo, Consolas, monospace" fill="#e7ebf7">sujet.md</tspan> mise à jour  ·  source de vérité : <tspan font-family="Menlo, Consolas, monospace" fill="#e7ebf7">&lt;projet&gt;/.atelier/sujets/</tspan>  ·  un lot suivant : <tspan font-family="Menlo, Consolas, monospace" fill="#e7ebf7">02-spec-lot2.md</tspan>
+    </text>
+  </g>
+</svg>

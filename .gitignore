@@ -1,0 +1,7 @@
+.idea/
+.junie/
+.claude/settings.local.json
+.sujet-courant
+.serena/
+.env.local
+.env.*.local
